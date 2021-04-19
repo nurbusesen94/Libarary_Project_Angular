@@ -1,0 +1,32 @@
+<div class="login-wrapper">
+  <div class="login-left d-none d-sm-flex">
+    <img class="login-img" src="../../../assets/images/login1.jpg">
+  </div>
+  <div class="login-right">
+    <img class="login-logo" src="../../../assets/images/logo.jpg">
+    <h4>Login for read the future</h4>
+    <div class="form-wrapper">
+      <form (ngSubmit)="submit()" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" [(ngModel)]="formParams.email" #email="ngModel" name="email"
+            id="email" type="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="formParams.password" type="password"
+            #password="ngModel" name="password" id="password" required>
+        </div>
+        <small *ngIf="!isFormValid && isSubmitted" id="emailHelp" aria-describedby="emailHelp"
+          class="form-text text-muted mb-4">
+          Please
+          check your e-mail address and password!</small>
+
+        <div class="button-group">
+          <button type="submit" class="btn btn-dark" [disabled]="!loginForm.form.valid">Login</button>
+          <a [routerLink]="['/register']" routerLinkActive="active" class="btn btn-dark">Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

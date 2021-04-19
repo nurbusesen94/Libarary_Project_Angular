@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Library</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Add Book</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of bookList" class="card col-sm-12 mb-4" style="width: 18rem;">
+      <img src="" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title"><b>{{item.name}}</b> </h5>
+        <p class="card-text mt-4"><b>Description :</b> {{item.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Author : </b>{{item.author}}</li>
+        <li class="list-group-item"><b>Price :</b> {{item.price}}</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Buy Book</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.book-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.book-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 12px;
+  color: white;
+}
+.book-item span {
+  padding: 8px 16px;
+  background: rgb(122, 122, 122);
+  width: 200px;
+  border-radius: 20px;
+}
+.book-item.passive {
+  background: rgb(243, 112, 112);
+}
+
+.book-item.passive span {
+  background: rgb(243, 112, 112);
+  border-radius: 20px;
+}
